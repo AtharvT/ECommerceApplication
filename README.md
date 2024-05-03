@@ -1,6 +1,5 @@
-# ECommerceApplication
-This is a low level design implementation of an e-commerce application
-
+This is a low-level design implementation of an e-commerce application.
+Features
 
 Users should be able to add new products to sell.
 Users should be able to search for products by their name or category.
