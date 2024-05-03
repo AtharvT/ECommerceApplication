@@ -13,15 +13,19 @@ public class Admin {
     private final ICartService cartService;
     private final IOrderService orderService;
     private final INotificationService notificationService;
+    private final IReviewService reviewService;
+    private final IAddressService addressService;
 
 
-    public Admin(IUserService userService, IPaymentService paymentService, IInventoryService inventoryService, ICartService cartService, IOrderService orderService, INotificationService notificationService) {
+    public Admin(IUserService userService, IPaymentService paymentService, IInventoryService inventoryService, ICartService cartService, IOrderService orderService, INotificationService notificationService, IReviewService reviewService, IAddressService addressService) {
         this.userService = userService;
         this.paymentService = paymentService;
         this.inventoryService = inventoryService;
         this.cartService = cartService;
         this.orderService = orderService;
         this.notificationService = notificationService;
+        this.reviewService = reviewService;
+        this.addressService = addressService;
     }
 
     public void addProductToSell(Product product) {

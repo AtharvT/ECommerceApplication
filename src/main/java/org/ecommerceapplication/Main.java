@@ -45,8 +45,10 @@ public class Main {
         IPaymentService paymentService = new PaymentServiceImpl();
 
         INotificationService notificationService = new NotificationServiceImpl();
-        IOrderService orderService = new OrderServiceImpl(cartService, inventoryService, paymentService, notificationService);
-        Admin admin = new Admin(userService, paymentService, inventoryService, cartService, orderService, notificationService);
+        IOrderService orderService = new OrderServiceImpl(cartService, inventoryService, paymentService, notificationService, new HashMap<>());
+        IReviewService reviewService = new ReviewServiceImpl();
+        IAddressService addressService = new AddressServiceImpl();
+        Admin admin = new Admin(userService, paymentService, inventoryService, cartService, orderService, notificationService, reviewService, addressService);
 
         System.out.println("Adding a product to product inventory");
         Product product = new Product("3", "Kindle Paperwhite", 129.99, "Waterproof e-reader with high-resolution display", 75, "Electronics");
@@ -63,7 +65,7 @@ public class Main {
         admin.addToCart(product, user);
 
 
-        System.out.println("Please modify your p");
+        System.out.println("Please modify your product");
 
 
 
